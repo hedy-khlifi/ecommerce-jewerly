@@ -3,7 +3,6 @@
 import { products, Category } from "@/app/data/products";
 import Link from "next/link";
 import { useState, useMemo } from "react";
-
 const img =
   "https://images.pexels.com/photos/20299702/pexels-photo-20299702.jpeg";
 function Collection() {

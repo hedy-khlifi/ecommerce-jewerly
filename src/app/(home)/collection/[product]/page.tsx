@@ -2,7 +2,11 @@
 import { products } from "@/app/data/products";
 import Link from "next/link";
 import AddToCartButton from "@/components/AddToCartButton";
-
+export async function generateStaticParams() {
+  return products.map((product) => ({
+    product: String(product.id),
+  }));
+}
 type Props = { params: Promise<{ product: string }> };
 
 async function Page({ params }: Props) {

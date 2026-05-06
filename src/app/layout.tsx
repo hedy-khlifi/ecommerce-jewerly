@@ -1,3 +1,4 @@
+// app/layout.tsx
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
@@ -15,7 +16,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "FakhFakh jewerly",
+  metadataBase: new URL("https://fakhfakh-jewerly.vercel.app"),
+  title: "FakhFakh jewelry",
   description:
     "Pierres précieuses, pierres fines, joaillerie et créations sur-mesure.",
   openGraph: {
@@ -26,7 +28,7 @@ export const metadata: Metadata = {
     siteName: "Jewelry Fakhfakh",
     images: [
       {
-        url: "/profilepic.jpg", 
+        url: "/profilepic.jpg",
         width: 1200,
         height: 630,
         alt: "Jewelry Fakhfakh - Luxury Tunisian Jewelry",
@@ -47,10 +49,7 @@ export default function RootLayout({
     >
       <body className="min-h-full flex flex-col">
         <ThemeProvider>
-          <CartProvider>
-            {children}
-            
-          </CartProvider>
+          <CartProvider>{children}</CartProvider>
         </ThemeProvider>
       </body>
     </html>
