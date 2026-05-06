@@ -48,7 +48,7 @@ function Carousel() {
   const prevSlide = () =>
     setCurrentSlide((prev) => (prev === 0 ? slides.length - 1 : prev - 1));
 
-  const goToSlide = (index) => setCurrentSlide(index);
+  const goToSlide = (index:number) => setCurrentSlide(index);
 
   useEffect(() => {
     const interval = setInterval(nextSlide, 5000);
