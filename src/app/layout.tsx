@@ -42,7 +42,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "FakhFakh Jewelry",
     description: "Luxury Tunisian handcrafted jewelry",
-    images: ["https://fakhfakh-jewerly.vercel.app/profilepic.jpg"],
+    images: ["https://fakhfakh-jewerly.vercel.app/favicon.jpg"],
   },
 };
 
