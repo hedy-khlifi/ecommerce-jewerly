@@ -597,11 +597,11 @@ function Contact() {
           <div className="space-y-4">
             <div className="bg-gray-50 border border-gray-200 p-4 sm:p-6 rounded-lg">
               <h3 className="text-base sm:text-lg text-gray-900 mb-2 font-medium">
-                Do you offer international shipping?
+                Do you offer shipping across all of Tunisia?{" "}
               </h3>
               <p className="text-xs sm:text-sm text-gray-600 leading-relaxed">
-                Yes, we ship worldwide with fully insured delivery. Shipping
-                costs vary by destination.
+                Yes, we offer shipping across all of Tunisia with fully insured
+                delivery.
               </p>
             </div>
 

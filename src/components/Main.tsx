@@ -101,10 +101,10 @@ export default function MainSection() {
             </p>
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
               <button className="px-6 sm:px-8 py-2.5 sm:py-3 bg-gray-900 text-white hover:bg-amber-600 transition-all duration-300 rounded-sm tracking-wide text-sm sm:text-base">
-                Shop Collection
+                <Link href="/collection">Shop Collection</Link>
               </button>
               <button className="px-6 sm:px-8 py-2.5 sm:py-3 border border-gray-300 text-gray-900 hover:border-amber-600 hover:text-amber-600 transition-all duration-300 rounded-sm text-sm sm:text-base">
-                View Lookbook
+                <Link href="/collection">View Lookbook</Link>
               </button>
             </div>
           </div>
@@ -157,11 +157,12 @@ export default function MainSection() {
                 <img
                   src={product.image}
                   alt={product.name}
+                  loading="lazy"
                   className="w-full h-64 sm:h-80 md:h-96 object-cover transform group-hover:scale-110 transition-transform duration-700"
                 />
                 <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-all duration-300"></div>
                 <button className="absolute bottom-3 sm:bottom-4 left-3 sm:left-4 right-3 sm:right-4 bg-white text-gray-900 py-2 text-center opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-y-4 group-hover:translate-y-0 text-xs sm:text-sm tracking-wide rounded">
-                  Quick View
+                  <Link href="/collection">Quick View</Link>
                 </button>
                 <span className="absolute top-3 sm:top-4 right-3 sm:right-4 bg-amber-600 text-white px-2 sm:px-3 py-0.5 sm:py-1 text-[10px] sm:text-xs tracking-wide rounded">
                   {product.category}
@@ -179,7 +180,7 @@ export default function MainSection() {
 
         <div className="text-center mt-10 sm:mt-12">
           <button className="px-6 sm:px-8 py-2.5 sm:py-3 border-2 border-gray-900 text-gray-900 hover:bg-gray-900 hover:text-white transition-all duration-300 rounded-sm tracking-wide text-sm sm:text-base">
-            View All Collections
+           <Link href='/collection'>View All Collections</Link> 
           </button>
         </div>
       </div>
@@ -188,36 +189,92 @@ export default function MainSection() {
       <div className="bg-gradient-to-br from-gray-50 to-white py-16 sm:py-20 md:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 sm:gap-12">
-            {[
-              {
-                icon: "💎",
-                title: "Certified Gemstones",
-                description:
-                  "Every stone comes with authenticity certification",
-              },
-              {
-                icon: "✨",
-                title: "Lifetime Service",
-                description: "Complimentary cleaning and maintenance",
-              },
-              {
-                icon: "🚚",
-                title: "Secure Delivery",
-                description: "Insured shipping worldwide",
-              },
-            ].map((feature, idx) => (
-              <div key={idx} className="text-center group">
-                <div className="text-4xl sm:text-5xl mb-3 sm:mb-4 transform group-hover:scale-110 transition-transform duration-300">
-                  {feature.icon}
+            {/* Certified Gemstones */}
+            <div className="text-center group">
+              <div className="flex justify-center mb-3 sm:mb-4">
+                <div className="text-amber-600 transform group-hover:scale-110 transition-transform duration-300">
+                  <svg
+                    className="w-12 h-12 sm:w-14 sm:h-14"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="1.5"
+                      d="M5 3l4 2-4 2-4-2 4-2zM5 11l4 2-4 2-4-2 4-2zM13 3l4 2-4 2-4-2 4-2zM13 11l4 2-4 2-4-2 4-2zM9 7l4 2-4 2-4-2 4-2zM9 15l4 2-4 2-4-2 4-2z"
+                    />
+                  </svg>
                 </div>
-                <h3 className="text-lg sm:text-xl font-semibold text-gray-900 mb-2">
-                  {feature.title}
-                </h3>
-                <p className="text-gray-500 text-sm sm:text-base">
-                  {feature.description}
-                </p>
               </div>
-            ))}
+              <h3 className="text-lg sm:text-xl font-semibold text-gray-900 mb-2">
+                Certified Gemstones
+              </h3>
+              <p className="text-gray-500 text-sm sm:text-base">
+                Every stone comes with authenticity certification
+              </p>
+            </div>
+
+            {/* Lifetime Service */}
+            <div className="text-center group">
+              <div className="flex justify-center mb-3 sm:mb-4">
+                <div className="text-amber-600 transform group-hover:scale-110 transition-transform duration-300">
+                  <svg
+                    className="w-12 h-12 sm:w-14 sm:h-14"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="1.5"
+                      d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"
+                    />
+                  </svg>
+                </div>
+              </div>
+              <h3 className="text-lg sm:text-xl font-semibold text-gray-900 mb-2">
+                Lifetime Service
+              </h3>
+              <p className="text-gray-500 text-sm sm:text-base">
+                Complimentary cleaning and maintenance
+              </p>
+            </div>
+
+            {/* Secure Delivery */}
+            <div className="text-center group">
+              <div className="flex justify-center mb-3 sm:mb-4">
+                <div className="text-amber-600 transform group-hover:scale-110 transition-transform duration-300">
+                  <svg
+                    className="w-12 h-12 sm:w-14 sm:h-14"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="1.5"
+                      d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-1.5 6M17 13l1.5 6M9 21h6M12 15v6"
+                    />
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="1.5"
+                      d="M9 11l3 3 3-3"
+                    />
+                  </svg>
+                </div>
+              </div>
+              <h3 className="text-lg sm:text-xl font-semibold text-gray-900 mb-2">
+                Secure Delivery
+              </h3>
+              <p className="text-gray-500 text-sm sm:text-base">
+                Insured shipping across Tunisia
+              </p>
+            </div>
           </div>
         </div>
       </div>

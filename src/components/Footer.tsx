@@ -47,20 +47,11 @@ export default function Footer() {
           </ul>
         </div>
       </div>
-      <div className="border-t border-[#c9a84c18] pt-6 flex justify-between items-center">
+      <div className="border-t border-[#c9a84c18] pt-6 flex justify-center items-center">
         <p className="text-xs text-[#4a3f33]">
-          © {new Date().getFullYear()} Fakhfekh Jewellery. All rights reserved.
+          © {new Date().getFullYear()} Fakhfekh Jewellery.
         </p>
-        <div className="flex gap-6">
-          {["Instagram", "Facebook", "TikTok"].map((s) => (
-            <span
-              key={s}
-              className="text-xs text-[#4a3f33] hover:text-[#c9a84c] transition-colors cursor-pointer tracking-wider"
-            >
-              {s}
-            </span>
-          ))}
-        </div>
+        
       </div>
     </footer>
   );

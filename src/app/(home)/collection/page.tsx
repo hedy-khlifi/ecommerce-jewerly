@@ -118,6 +118,7 @@ function Collection() {
                       <img
                         src={product.images[0]}
                         alt={product.name}
+                        loading="lazy"
                         className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
                       />
                     </div>
@@ -142,6 +143,7 @@ function Collection() {
                         <Link
                           href={`/collection/${product.id}`}
                           className="text-xs sm:text-sm bg-black text-white px-3 sm:px-4 py-1.5 rounded-full hover:bg-amber-800 transition-colors whitespace-nowrap"
+                        prefetch={true}
                         >
                           View Details
                         </Link>

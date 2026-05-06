@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 function About() {
   return (
     <div className="font-sans antialiased overflow-x-hidden w-full max-w-full">
@@ -33,6 +35,7 @@ function About() {
                   src="https://images.unsplash.com/photo-1617038260897-41a1f14a8ca0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
                   alt="Tunisian artisan crafting jewelry"
                   className="w-full h-64 sm:h-80 md:h-96 object-cover"
+                  loading="lazy"
                 />
               </div>
             </div>
@@ -54,7 +57,7 @@ function About() {
                 for beauty and quality.
               </p>
               <button className="mt-2 sm:mt-4 px-6 sm:px-8 py-2.5 sm:py-3 bg-amber-800 text-white rounded-full hover:bg-amber-900 transition duration-300 shadow-md hover:shadow-lg text-sm sm:text-base">
-                Discover Our Craftsmanship
+                <Link href="/collection"> Discover Our Craftsmanship</Link>
               </button>
             </div>
           </div>

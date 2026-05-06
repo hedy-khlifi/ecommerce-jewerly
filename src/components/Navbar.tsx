@@ -12,10 +12,9 @@ function Navbar() {
 
   const cartItemCount = items.reduce((total, item) => total + item.quantity, 0);
 
-  // Check if we're on cart page OR product detail page
-  const isCartPage = pathname === "/cart";
-  const isProductDetailPage =
-    pathname?.startsWith("/collection/") && pathname !== "/collection";
+             const isCartPage = pathname === "/cart";
+            const isProductDetailPage =
+              pathname?.startsWith("/collection/") && pathname !== "/collection";
   const hideLogoOnMobile = isCartPage || isProductDetailPage;
 
   return (
@@ -33,6 +32,7 @@ function Navbar() {
               src="/nobg.png"
               alt="logo"
               width={40}
+              loading="lazy"
               className="sm:w-[50px]"
             />
           </Link>
@@ -131,6 +131,13 @@ function Navbar() {
               ABOUT
             </Link>
             <Link
+              href="/contact"
+              className="block text-white text-center py-2"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              CONTACT
+            </Link>
+            <Link
               href="/cart"
               className="flex items-center justify-center gap-2 text-white text-center py-2 relative"
               onClick={() => setIsMenuOpen(false)}
@@ -142,13 +149,6 @@ function Navbar() {
                   {cartItemCount > 99 ? "99+" : cartItemCount}
                 </span>
               )}
-            </Link>
-            <Link
-              href="/contact"
-              className="block text-white text-center py-2"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              CONTACT
             </Link>
           </div>
         )}

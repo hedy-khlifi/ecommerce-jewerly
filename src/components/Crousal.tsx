@@ -68,7 +68,7 @@ function Carousel() {
               index === currentSlide ? "opacity-100" : "opacity-0"
             }`}
           >
-            <img src={slide.img} className={imgClassname} alt={slide.alt} />
+            <img src={slide.img} loading="lazy" className={imgClassname} alt={slide.alt} />
 
             {/* ✅ Better overlay for mobile */}
             <div className="absolute inset-0 bg-black/40 sm:bg-black/30"></div>
