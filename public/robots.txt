@@ -1,0 +1,19 @@
+# public/robots.txt
+User-agent: *
+Allow: /
+
+# Specifically allow Facebook crawler
+User-agent: facebookexternalhit
+Allow: /
+
+User-agent: Twitterbot
+Allow: /
+
+# Allow all crawlers to access images
+Allow: /profilepic.jpg
+Allow: /*.jpg
+Allow: /*.png
+Allow: /*.jpeg
+
+# Sitemap location
+Sitemap: https://fakhfakh-jewerly.vercel.app/sitemap.xml
