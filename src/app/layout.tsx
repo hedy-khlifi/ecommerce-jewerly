@@ -17,23 +17,32 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://fakhfakh-jewerly.vercel.app"),
-  title: "FakhFakh jewelry",
+
+  title: "FakhFakh Jewelry",
   description:
     "Pierres précieuses, pierres fines, joaillerie et créations sur-mesure.",
+
   openGraph: {
-    title: "Jewelry Fakhfakh - Luxury Tunisian Jewelry",
-    description:
-      "Discover exceptional craftsmanship and timeless elegance. Certified gemstones, handcrafted jewelry.",
+    title: "FakhFakh Jewelry - Luxury Tunisian Jewelry",
+    description: "Discover exceptional craftsmanship and timeless elegance.",
     url: "https://fakhfakh-jewerly.vercel.app",
-    siteName: "Jewelry Fakhfakh",
+    siteName: "FakhFakh Jewelry",
     images: [
       {
-        url: "/profilepic.jpg",
+        url: "https://fakhfakh-jewerly.vercel.app/profilepic.jpg",
         width: 1200,
         height: 630,
-        alt: "Jewelry Fakhfakh - Luxury Tunisian Jewelry",
+        alt: "Luxury Jewelry",
       },
     ],
+    type: "website",
+  },
+
+  twitter: {
+    card: "summary_large_image",
+    title: "FakhFakh Jewelry",
+    description: "Luxury Tunisian handcrafted jewelry",
+    images: ["https://fakhfakh-jewerly.vercel.app/profilepic.jpg"],
   },
 };
 
